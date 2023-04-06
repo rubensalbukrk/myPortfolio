@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-----------FONT MONTSERRAT------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Pacifico&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Dev-Rubens</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <!--CABEÇALHO-->
+            <div class="header">
+                    <div class="menus">
+                            <div id="buttonid" class="button" onclick="showProject()">Projetos</div>
+                            <div id="buttonid" class="button" onclick="showSkills()">Skills</div>
+                            <div id="buttonid" class="button" onclick="showAbout()">About</div>
+                    </div>
+                    <div class="mensagemOn">
+                            <h1 class="texto">Apaixonado pela tecnológia, <br> desenvolvendo webs e apps mobiles para facilitar a sua vida!</h1>
+                    </div>
+                    
+            </div>
+
+            <!--ELEMENTOS DE PAGINAS-->
+            <div id="pagprojects" class="hide">
+     
+                <div class="xclose" onclick="xClose()">
+                    
+                <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
+                </div>
+                
+                <div class="content-project">
+                    <img src="./src/imgs-project/projeto1.png" alt="projeto1">Enginer</img>
+                    <p>Versão 1.0.4</p>
+                </div>
+                <div class="content-project">
+                    <img src="./src/imgs-project/projeto2.png" alt="projeto2">Reader</img>
+                    <p>Versão Beta</p>
+                </div>
+                <div class="content-project">
+                    <img src="./src/imgs-project/projeto3.png" alt="projeto3">X-Share</img>
+                    <p>Versão Instavél</p>
+                </div>
+                
+            </div>
+            <div id="pagskills" class="hide">
+                <div class="xclose" onclick="xClose()">
+                <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
+                </div>
+                <h1>Algumas habilidades</h1>
+            </div>
+            <div id="pagabout" class="hide">
+                    <div class="xclose" onclick="xClose()">
+                        <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
+                    </div>
+                <h1>Contate-me sobre sua ideia!</h1>
+            </div>
+        </div>
+        <aside>
+            <!--REDES SOCIAIS-->
+            <div class="boxside">
+                <a href="http://github.com/rubensalbukrk/">
+                    <img class="social" src="./src/icons/github.png" />
+                </a>
+                <a href="http://instagram.com/rubinhopro_083/">
+                    <img class="social" src="./src/icons/instagram.png" />
+                </a>
+                <a href="https://www.facebook.com/rubensalbukrk/">
+                    <img class="social" src="./src/icons/facebook.png" />
+                </a>
+            </div>
+        </aside>
+        <!--FOOTER-->
+        <footer>
+                <h1 class="sobre">Todos os direitos reservados. &copy 2023.</h1>
+        </footer>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
