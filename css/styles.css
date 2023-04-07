@@ -16,6 +16,41 @@ main {
     width: 100vw;
     height: 100vh;
 }
+/****MENU****/
+.menus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(255, 255, 255, 0.123);
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    width: 100%;
+    height: 60px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.101);
+    
+}
+
+.button {
+    color: rgba(223, 222, 222, 0.379);
+    font-family: 'Orbitron', sans-serif;
+    width: 100px;
+    height: 29px;
+    border-radius: 30px;
+    margin-left: 100px;
+    padding-top: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: 800ms;
+}
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.39) ;
+    color: rgb(255, 255, 255) ;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -49,6 +84,10 @@ main {
     -webkit-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
 -moz-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
 box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
+transition: 6ms
+}
+.xclose:hover {
+    background-color: rgba(255, 255, 255, 0.397);
 }
 .contents {
     padding: 20px 20px 20px 20px;
@@ -64,11 +103,16 @@ box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
 box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
     width: 80vw;
     height: 400px;;
-    margin-top: 100px;
+    margin-top: 20px;
     transition: 0.5ms;
 
 }
+.hide {
+    display: none;
+}
+/********PAGINA PROJETOS********/
 .content-project {
+
     padding: 20px 20px 20px 20px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.058);
@@ -91,67 +135,48 @@ box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
     height: 250px;
 
 }
+figcaption {
+   
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
 img {
     margin-bottom: 5px;
     width: 60%;
     cursor: pointer;
 
 }
-.hide {
-    display: none;
+/********PAGINA SKILLS********/
+.skillsimg {
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    padding-right: 20px;
+    animation: rotateSkill 4s ease-out infinite;
 }
+#textoskills {
+    width: 100%;
+    color: whitesmoke;
+    font-size: 48px;
+    padding-left: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/******CONDIÇÕES PARA ALTERAR PAGINAS*******/
 .mensagemOff {
     display: none;
 }
 .mensagemOn {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 190px;
 }
-
-.texto {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 32px;
-    text-align: center;
-    width: 70%;
-    opacity: 0.6;
-    text-align: center;
-    color: rgb(195, 195, 195);
-}
-.menus {
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(2px);
- 
-    position: fixed;
-    width: 100%;
-    height: 50px;
-
-    background-color: rgba(255, 255, 255, 0.101);
-    align-items: center;
-    justify-content: center;
-}
-
-.button {
-    color: rgba(223, 222, 222, 0.979);
-    font-family: 'Ubuntu', sans-serif;
-    width: 100px;
-    height: 29px;
-    margin-top: 5px;
-    margin-left: 20px;
-    padding-top: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: 1s;
-}
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.39) ;
-    color: rgb(255, 255, 255) ;
-}
+/*******REDES SOCIAIS*******/
 aside {
     display: flex;
     flex-direction: column;
@@ -167,7 +192,7 @@ aside {
     align-items: center;
     width: 50px;
     height: 150px;
-    
+    opacity: 0.5;
     transition: 1s;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.101);
@@ -196,33 +221,103 @@ box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
     margin-bottom: 20px;
     margin-left: 7px;
 }
+/****TEXTO WELCOME******/
+.texto{
+    position: absolute;
+    top: 300px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    width: 70%;
+    opacity: 0.6;
+   
+    text-align: center;
+    color: rgb(195, 195, 195);
+    animation: fadeDown 2s ease-in;
+    animation-duration: 2s;
+}
+.texto2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    position: absolute;
+    bottom: 25%;
+    width: 70%;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    right: 0px;
+    animation: fadeRight 2s ease-in;
+    animation-duration: 2s;
+}
 footer {
-    display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 40px;
+    bottom: 0%;
+    height: 90px;
     opacity: 0.5;
-    border-radius: 20px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
     background-color: rgba(255, 255, 255, 0.101);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.123);
     -webkit-box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 }
-.sobre {
+#assinatura {
+    font-family: 'Petemoss', cursive;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 50;
+    opacity: 0.5;
+    color: aliceblue;
+}
+.txtFooter {
     text-align: center;
     font-size: 20px;
     color: #fff;
-    font-family: 'Montserrat';
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
 }
 
+
+/*******ANIMAÇÕES*******/
 @keyframes gradient {
     0% { background-position: 50% 0%; }
     100% { background-position: 50% 100%; }
 }
+@keyframes rotateSkill {
+    to {
+        transform: rotateY(390deg)
+    }
+    from {
+        transform: rotateY(0deg)
+    }
+}
+@keyframes fadeRight {
+    to {
+        transform: translateX(0px);
+        opacity: 0.5;
+    }
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+@keyframes fadeDown {
+    to {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+    from {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
 
-
+/******RESPONSIVE*******/
 @media screen and (max-width: 868px){
 
     footer {

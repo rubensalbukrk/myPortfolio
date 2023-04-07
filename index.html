@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-----------FONT MONTSERRAT------------->
+    <!-----------GOOGLE FONTS------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Pacifico&family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Petemoss&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Dev-Rubens</title>
 </head>
@@ -16,14 +16,16 @@
         <div class="container">
             <!--CABEÇALHO-->
             <div class="header">
-                    <div class="menus">
-                            <div id="buttonid" class="button" onclick="showProject()">Projetos</div>
-                            <div id="buttonid" class="button" onclick="showSkills()">Skills</div>
-                            <div id="buttonid" class="button" onclick="showAbout()">About</div>
-                    </div>
-                    <div class="mensagemOn">
-                            <h1 class="texto">Apaixonado pela tecnológia, <br> desenvolvendo webs e apps mobiles para facilitar a sua vida!</h1>
-                    </div>
+                <div class="menus">
+                    <div id="buttonid" class="button" onclick="showProject()">Projetos</div>
+                    <div id="buttonid" class="button" onclick="showSkills()">Skills</div>
+                    <div id="buttonid" class="button" onclick="showAbout()">About</div>
+                </div>
+                <div class="mensagemOn">
+                    <h1 class="texto">O mundo da tecnológia a cada dia mais proximo de você, do seu negócio...</h1>
+                    <hr>
+                    <h3 class="texto2">VAMOS CRIAR ?!</h3>
+                </div>
                     
             </div>
 
@@ -31,39 +33,45 @@
             <div id="pagprojects" class="hide">
      
                 <div class="xclose" onclick="xClose()">
-                    
-                <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
+                    <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
                 </div>
                 
                 <div class="content-project">
-                    <img src="./src/imgs-project/projeto1.png" alt="projeto1">Enginer</img>
-                    <p>Versão 1.0.4</p>
+                   
+                        <img src="./src/imgs-project/projeto1.png" alt="Foto do Projeto 1" srcset="">
+                        <figcaption>Versão 1.0.4</figcaption>
+                   
                 </div>
                 <div class="content-project">
                     <img src="./src/imgs-project/projeto2.png" alt="projeto2">Reader</img>
-                    <p>Versão Beta</p>
+                    <figcaption>Versão Beta</figcaption>
                 </div>
                 <div class="content-project">
                     <img src="./src/imgs-project/projeto3.png" alt="projeto3">X-Share</img>
-                    <p>Versão Instavél</p>
+                    <figcaption>Versão Instável</figcaption>
                 </div>
                 
             </div>
+            <!--PAGINA DE HABILIDADES-->
             <div id="pagskills" class="hide">
                 <div class="xclose" onclick="xClose()">
                 <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
                 </div>
-                <h1>Algumas habilidades</h1>
+                 <img class="skillsimg" src="./src/skills.png" alt="Fotos de Habilidades" srcset="">
+            <h1 id="textoskills">Com uma vasta experiência entre as tecnologias, podemos resolver problemas de vários tipos...</h1>
+
             </div>
+
             <div id="pagabout" class="hide">
                     <div class="xclose" onclick="xClose()">
                         <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
                     </div>
                 <h1>Contate-me sobre sua ideia!</h1>
             </div>
+            <!--FIM DAS PAGINAS-->
         </div>
-        <aside>
             <!--REDES SOCIAIS-->
+        <aside>
             <div class="boxside">
                 <a href="http://github.com/rubensalbukrk/">
                     <img class="social" src="./src/icons/github.png" />
@@ -76,10 +84,12 @@
                 </a>
             </div>
         </aside>
-        <!--FOOTER-->
+            <!--FOOTER-->
         <footer>
-                <h1 class="sobre">Todos os direitos reservados. &copy 2023.</h1>
+            <h2 id="assinatura">by Rubens Albuquerque</h2>
+            <h1 class="txtFooter">Todos os direitos reservados. &copy 2023.</h1>
         </footer>
+        
     </main>
     <script src="./js/script.js"></script>
 </body>
