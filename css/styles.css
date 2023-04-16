@@ -2,14 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
+    font-family: 'Orbitron', sans-serif;
+    
 }
-
-main {
-    display: flex;
-    background-image: url('/src/background.jpg');
+html {
+    background-image: url('/src/background-mob.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+main {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -21,7 +23,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,13 +37,51 @@ main {
     
 }
 
-.button {
-    color: rgba(223, 222, 222, 0.379);
+#loading {
+    color: #fff;
+    display: none;
+}
+/****TEXTO WELCOME******/
+.texto{
+    position: absolute;
+    top: 12rem;
     font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    width: 70%;
+    opacity: 0.6;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    animation: fadeDown 2s ease-in;
+    animation-duration: 2s;
+}
+.texto2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 56px;
+    position: absolute;
+    bottom: 22%;
+    width: 70%;
+    opacity: 0;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    
+    animation: piscar 2s ease-in-out infinite alternate;
+    animation-delay: 3s;
+}
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 100px;
+
+}
+.button {
+    color: rgba(223, 222, 222, 0.879);
+    
     width: 100px;
-    height: 29px;
+    height: 32px;
     border-radius: 30px;
-    margin-left: 100px;
+   
     padding-top: 4px;
     text-align: center;
     cursor: pointer;
@@ -56,16 +96,7 @@ main {
     flex-direction: column;
     
 }
-.welcome {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    color: rgb(241, 241, 241);
-    opacity: 0.3;
-    border-bottom-width: 2px solid #fff;
-    backdrop-filter: blur(40px);
-    transition: 2s;
-}
+
 
 .xclose {
     display: flex;
@@ -84,7 +115,7 @@ main {
     -webkit-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
 -moz-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
 box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
-transition: 6ms
+transition: 1s
 }
 .xclose:hover {
     background-color: rgba(255, 255, 255, 0.397);
@@ -97,7 +128,7 @@ transition: 6ms
     align-items: center;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.058);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(10px);
     -webkit-box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
@@ -120,19 +151,19 @@ box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
 box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 15px;
     transition: 1s;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .content-project:hover {
 
-    width: 250px;
-    height: 250px;
+    width: 190px;
+    height: 190px;
 
 }
 figcaption {
@@ -148,21 +179,165 @@ img {
     cursor: pointer;
 
 }
-/********PAGINA SKILLS********/
-.skillsimg {
-    width: 200px;
-    height: 200px;
-    margin-left: 40px;
-    padding-right: 20px;
-    animation: rotateSkill 4s ease-out infinite;
+/********PAGINA HABILIDADES********/
+#pagskills {
+    padding: 0px 0px;
 }
-#textoskills {
+#pagskills h1 {
+    position: absolute;
+    font-size: 28px;
+    color: rgb(195, 195, 195);
+    bottom: 4rem;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+.imgs-code {
+    position: absolute;
+    top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
-    color: whitesmoke;
-    font-size: 48px;
-    padding-left: 15px;
+    height: 100px;
+    margin-bottom: 100px;
+}
+.cardskill {
+    width: 100px;
+    height: 100px;
+}
+/*ANIMAR IMAGEMS SKILL*/
+#imgHTML {
+    transition-delay: 0.1ms;
+    animation: show-skill 2s;
+    animation-delay: 400ms;
+    animation-fill-mode: backwards;
+   
+}
+#imgCSS {
+    transition-delay: 0.2ms;
+    animation: show-skill 3s;
+    animation-delay: 800ms;
+    animation-fill-mode: backwards;
+    
+}
+#imgJS {
+        
+    transition-delay: 0.2ms;
+    animation: show-skill 3s;
+    animation-delay: 1200ms;
+    animation-fill-mode: backwards;
+}
+#imgREACT {
+    opacity: 0;
+    transition-delay: 0.2ms;
+    animation: skill-react 3s ease-in-out infinite alternate;
+    animation-delay: 1800ms;
+    
+}
+#imgJSWEB {
+    transition-delay: 0.2ms;
+    animation: show-skill 3s;
+    animation-delay: 2200ms;
+    animation-fill-mode: backwards;
+}
+#imgMONGO {
+    transition-delay: 0.2ms;
+    animation: show-skill 3s;
+    animation-delay: 2600ms;
+    animation-fill-mode: backwards;
+}
+#imgGIT {
+    transition-delay: 0.2ms;
+    animation: show-skill 2s;
+    animation-delay: 3000ms;
+    animation-fill-mode: backwards;
+}
+/*******PAGINA CONTATO*******/
+#pagcontato {
+    color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
 }
+#form-email {
+    display: flex;
+    flex-direction: column;
+
+}
+input {
+    border-radius: 10px;
+}
+#txtinput {
+    margin-bottom: 20px;
+    width: 70%;
+    
+}
+textarea {
+    
+    width: 320px;
+    font-size: 24px;
+    height: 200px;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    max-width: 340px;
+    border-radius: 10px;
+    background: none;
+    max-height: 150px;
+    text-align: center;
+    white-space: normal;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+#enviar {
+    font-size: 32px;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 200px;
+    color: antiquewhite;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.058);
+    backdrop-filter: blur(10px);
+    transition: 1s;
+    -webkit-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
+box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
+}
+#enviar:hover {
+    background-color: rgba(255, 255, 255, 0.397);
+}
+
+.contatoContent {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 70%;
+    font-size: 28px;
+    height: 100%;
+    border-left: 3px dotted rgba(255, 255, 255, 0.404);
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contatoContent p {
+    text-align: center;
+}
+.contatoContents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.041);
+    width: 80%;
+    height: 20rem;
+}
+.contatoContents p {
+    font-size: 22px;
+    text-align: center;
+
+}
+
 
 /******CONDIÇÕES PARA ALTERAR PAGINAS*******/
 .mensagemOff {
@@ -221,41 +396,14 @@ box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
     margin-bottom: 20px;
     margin-left: 7px;
 }
-/****TEXTO WELCOME******/
-.texto{
-    position: absolute;
-    top: 300px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 32px;
-    width: 70%;
-    opacity: 0.6;
-   
-    text-align: center;
-    color: rgb(195, 195, 195);
-    animation: fadeDown 2s ease-in;
-    animation-duration: 2s;
-}
-.texto2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 48px;
-    position: absolute;
-    bottom: 25%;
-    width: 70%;
-    opacity: 0.6;
-    margin-top: 30px;
-    text-align: center;
-    color: rgb(195, 195, 195);
-    right: 0px;
-    animation: fadeRight 2s ease-in;
-    animation-duration: 2s;
-}
+
 footer {
     position: absolute;
     justify-content: center;
     align-items: center;
     width: 50%;
     bottom: 0%;
-    height: 90px;
+    height: 85px;
     opacity: 0.5;
     border-top-left-radius: 120px;
     border-top-right-radius: 120px;
@@ -271,7 +419,7 @@ box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
     font-size: 38px;
     text-align: center;
     font-weight: 50;
-    opacity: 0.5;
+    opacity: 0.9;
     color: aliceblue;
 }
 .txtFooter {
@@ -316,63 +464,303 @@ box-shadow: 0px -1px 43px -13px rgba(0,0,0,0.75);
         opacity: 0;
     }
 }
+@keyframes piscar {
+    to {
+        opacity: 1;
+    }
+    from {
+        opacity: 0;
+    }
+}
+@keyframes skill-react {
+    from{
+        opacity: 0;
+        transform: scale(0.001);
+        transform: rotate3d(3,7,8, 360deg);
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+@keyframes show-skill {
+    from { 
+        opacity: 0; 
+    }
+    to   { 
+        opacity: 1; 
+    }
+}
 
 /******RESPONSIVE*******/
-@media screen and (max-width: 868px){
+@media screen and (max-width: 1024px){
+    
+}
 
+@media screen and (max-width: 950px){
+
+    .container {
+        margin-bottom: 50px;
+         width: 70%;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center; 
+     }
+    .texto {
+        top: 8rem;
+    }
+    .cardskill {
+        width: 62px;
+        height: 62px;
+    }
+    .contatoContent p {
+        text-align: center;
+        font-size: 22px;
+    }
     footer {
         width: 80%;
     }
 
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 786px){
+    #pagskills h1 {
+        font-size: 22px;
+    }
     .content-project{
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
-}
-@media screen and (max-width: 600px){
-    .content-project{
-        width: 130px;
-        height: 130px;
-    }
-    .container {
-       display: flex
-    
-    }
-}
 
-@media screen and (max-width: 500px) {
-    main {
-        background-size: cover;
-        min-height: 750px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/*PAGINA DE CONTATO*/
+    .body {
+        min-height: 700px;
     }
     .contents {
         display: flex;
         flex-direction: column;
-        min-height: 650px;
+        justify-content: center;
+        align-items: center;
+        max-height: 700px;
+        
+    }
+    .contatoContent {
+        border-left: none;
+        display: none;
+    }
+    #form-email { 
+        align-items: center;
+        padding-left: 35px;
+        padding-top: 30px;
+      }
+    footer {
+        position: absolute;
+        bottom: 1px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+/*******PAGINA DE PROJETOS*/
+    .content-project{
+        width: 100px;
+        height: 100px;
+    }
+    .contents {
+        width: 90%;
+        display: flex;
+
+    }
+
+    .cardskill {
+        width: 48px;
+        height: 48px;
+    }
+/*******PAGINA DE CONTATO*/
+    .pagcontato{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
     }
     .container {
+       margin-bottom: 50px;
         width: 70%;
-        margin-bottom: 15px;
-        margin-top: -50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        
+    }
+    #form-email {
+      padding: 30px 20px 30px 20px;  
     }
     .texto{
         position: absolute;
-        font-size: 22px;
-        top: 50%;
+        top: 8rem;
+        margin-bottom: 10%;
+        width: 70%;
+
+    }
+    .texto2 {
+        position: absolute;
+        margin-top: 45%;
+        
     }
     .sobre {
         font-size: 16px;
     }
-    footer{
-        
-        position: absolute;
-        bottom: -20%;
-        width: 80%;
+    .txtFooter {
+        font-size: 18px;
+    }
+
+}
+@media screen and (max-width: 557px){
+
+    #form-email textarea {
+        width: 17rem;
+    }
+    .contents {
+        justify-content: center;
+        align-items: center;
+    }
+   .txtFooter {
+       font-size: 18px;
+   }
+}
+@media screen and (max-width: 523px){
+    .contents {
+       display: flex;
+       flex-direction: column;
     
+        justify-content: center;
+        align-items: center;
+    }
+    #form-email { 
+        align-items: center;
+        padding-left: 35px;
+        padding-top: 20px;
+      }
+    #form-email textarea {
+        width: 16rem;
+    }
+    .txtFooter {
+        font-size: 15px;
+    }
+ }
+
+@media screen and (max-width: 450px) {
+    /*RESPONSIVE PROJETOS*/
+    .content-project{
+        width: 130px;
+        height: 130px;
+    }
+    .content-project:hover{
+
+    }
+
+
+    /*RESPONSIVE HABILIDADE*/
+    .contents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 450px;
+        
+    }
+    .contents #txtskill {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    #imgHTML {
+        margin-left: 3rem;
+    }
+    #imgREACT{
+        margin-left: 1rem;
+        padding: 5px 0px 0px 5px;
+    }
+    #imgJSWEB {
+        margin-left: 1rem;
+    }
+    .break {
+        flex-basis: 100%;
+        width: 0;
+      }
+    .imgs-code {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        top: 4rem;
+
+    }
+    .texto {
+        font-size: 28px;
+    }
+    .texto2 {
+        font-size: 52px;
+    }
+
+/********PAGINA DE CONTATO*/
+#form-email textarea {
+    width: 14rem;
+}
+}
+@media screen and (max-width: 418px) {
+    /*RESPONSIVE HABILIDADE*/
+    #imgHTML{
+        margin-left: 2rem;
+    }
+    .texto {
+        font-size: 24px;
+    }
+    .texto2 {
+        
+        font-size: 50px;
+    }
+    .txtFooter {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .texto {
+        font-size: 26px;
+    }
+    .texto2 {
+        font-size: 46px;
+    }
+
+/*******PAGINA DE CONTATO*/
+#form-email textarea {
+    width: 12rem;
+}
+#enviar {
+    width: 12rem;
+    margin-right: 9px;
+}   
+}
+@media screen and (max-width: 343px) {
+    .texto {
+        font-size: 22px;
+    }
+    .texto2 {
+        position: absolute;
+        bottom: 10rem;
+        font-size: 42px;
+    }
+    #assinatura {
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width: 317px) {
+    .texto {
+        font-size: 18px;
+    }
+    .xclose {
+        margin-right: 0px;
+    }
+    .texto2 {
+        position: absolute;
+        bottom: 10rem;
+        font-size: 40px;
     }
 }

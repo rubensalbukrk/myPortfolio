@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="https://rubens-dev.netlify.app/src/thumb.jpg" />
+    <meta property="og:image:type" content="image/png" />
+    
     <!-----------GOOGLE FONTS------------->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Petemoss&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Dev-Rubens</title>
+    <title>BEM VINDO :)</title>
 </head>
 <body>
     <main>
         <div class="container">
             <!--CABEÇALHO-->
             <div class="header">
-                <div class="menus">
+                <nav class="menus">
                     <div id="buttonid" class="button" onclick="showProject()">Projetos</div>
                     <div id="buttonid" class="button" onclick="showSkills()">Skills</div>
-                    <div id="buttonid" class="button" onclick="showAbout()">About</div>
-                </div>
+                    <div id="buttonid" class="button" onclick="showAbout()">Contato</div>
+                </nav>
+               <div class="posts">
+                   <p id="loading"></p>
+                   <div id="posts-container"></div>
+               </div>
                 <div class="mensagemOn">
+                        
+                        
                     <h1 class="texto">O mundo da tecnológia a cada dia mais proximo de você, do seu negócio...</h1>
                     <hr>
-                    <h3 class="texto2">VAMOS CRIAR ?!</h3>
+                    
+                    <h3 class="texto2">[ ENTER ]</h3>
                 </div>
                     
             </div>
 
-            <!--ELEMENTOS DE PAGINAS-->
+            <!--PAGINA DE PROJETOS-->
             <div id="pagprojects" class="hide">
      
                 <div class="xclose" onclick="xClose()">
@@ -57,20 +69,61 @@
                 <div class="xclose" onclick="xClose()">
                 <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
                 </div>
-                 <img class="skillsimg" src="./src/skills.png" alt="Fotos de Habilidades" srcset="">
-            <h1 id="textoskills">Com uma vasta experiência entre as tecnologias, podemos resolver problemas de vários tipos...</h1>
-
+                <div class="imgs-code">
+                    <img class="cardskill" id="imgHTML" src="/src/imgs-skill/HTML.png" alt="HTML">
+                    <img class="cardskill" id="imgCSS" src="/src/imgs-skill/CSS.png" alt="CSS">
+                    <img class="cardskill" id="imgJS" src="/src/imgs-skill/JS.png" alt="JAVASCRIPT"><br>
+                    <div class="break"></div>
+                    <img class="cardskill" id="imgREACT" src="/src/imgs-skill/react.png" alt="REACT">
+                    <div class="break"></div>
+                    <img class="cardskill" id="imgJSWEB" src="/src/imgs-skill/JSweb.png" alt="JSWEB">
+                    <img class="cardskill" id="imgMONGO" src="/src/imgs-skill/MongoDB.png" alt="MONGODB">
+                    <img class="cardskill" id="imgGIT" src="/src/imgs-skill/GIT.png" alt="GIT">
+                </div>
+                <h1 id="txtskill">Com uma vasta experiência e curiosidade em novas tecnologias, juntos podemos realizar grandes ideias,
+                    <br>
+                    <br>EAÍ TA PRONTO?</h1>
+                
+        
             </div>
-
-            <div id="pagabout" class="hide">
+            <!--PAGINA DE CONTATO-->
+            <div id="pagcontato" class="hide">
                     <div class="xclose" onclick="xClose()">
                         <a style="font-family: 'Montserrat', sans-serif;" onclick="xClose()">x</a>
                     </div>
-                <h1>Contate-me sobre sua ideia!</h1>
+                    <form
+                        id="form-email"
+                        action="https://formspree.io/f/xayzljro"
+                        method="POST"
+                    >
+                        <label>Seu nome</label>
+                        <input type="text" name="name" style="width: 60%; margin-bottom: 20px;">
+                        <label>
+                            Seu email:
+                        </label>
+                         <input id="txtinput" type="email" name="email" placeholder="exemplo@mail.com">
+                       
+                        <label>
+                            Mensagem:
+                        </label>
+                            <textarea name="message"></textarea>
+                        
+                        <!-- your other form fields go here -->
+                        <button id="enviar" type="submit">ENVIAR</button>
+                    </form>
+                    <div  class="contatoContent">
+                        
+                            <p>Conto com detalhes para saber qual o seu proposito, seja especifico para que eu possa te responder com maior objetividade com a sua ideia!</p>
+                            
+                            <p><br>Obrigado :D</p>
+                        
+                
+                    </div>
+                
             </div>
             <!--FIM DAS PAGINAS-->
         </div>
-            <!--REDES SOCIAIS-->
+            <!--MENU SOCIAL-->
         <aside>
             <div class="boxside">
                 <a href="http://github.com/rubensalbukrk/">
@@ -91,6 +144,6 @@
         </footer>
         
     </main>
-    <script src="./js/script.js"></script>
+    
 </body>
 </html>
